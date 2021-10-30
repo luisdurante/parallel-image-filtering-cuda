@@ -5,7 +5,7 @@ Feito por:
  - Luis Durante
  - Guilherme Rabelo
  - Victor Moreno
- - Vitor OLiveira
+ - Vitor Oliveira
 
 ## Como rodar
  - No terminal digite `make`
