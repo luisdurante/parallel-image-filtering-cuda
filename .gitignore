@@ -1,0 +1,4 @@
+*.o
+output
+*.json
+results/*jpg
