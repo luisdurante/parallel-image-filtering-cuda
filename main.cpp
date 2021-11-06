@@ -4,8 +4,7 @@ Feito por:
     Luis Durante
     Guilherme Rabelo
     Victor Moreno
-    Vinicius Stein
-    Mauricio Freire
+    Vitor Kuribara
 */
 
 #include "Image.h"
