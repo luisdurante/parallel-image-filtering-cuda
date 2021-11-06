@@ -13,6 +13,7 @@ Feito por:
 #include <dirent.h>
 #include <cstring>
 #include <iostream>
+#include <time.h>
 
 std::vector<std::string> ListDir(const std::string& path);
 bool applyGrayScaleFilter(const Image& img, std::string fileName);
@@ -20,6 +21,7 @@ bool applySepiaFilter(const Image& img, std::string fileName);
 bool applyInvertedColorsFilter(const Image& img, std::string fileName);
 
 int main(int argc, char** argv) {
+    clock_t tStart = clock();
     std::string imagesFolder = "./images/";
     std::vector<std::string> images = ListDir(imagesFolder);
 
@@ -47,6 +49,8 @@ int main(int argc, char** argv) {
             continue;
         }
     }
+
+    printf("\nTempo gasto: %.2fs\n", (double)(clock() - tStart)/CLOCKS_PER_SEC);
 
     return 0;
 }
