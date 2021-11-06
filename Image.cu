@@ -30,45 +30,6 @@ __global__ void addKernelGray(uint8_t* originalData, unsigned int size, int tota
         originalData[pixelIndex] = gray;
         pixelIndex += totalThreads;
     }
-    
-
-
-    //for (size_t i = 0; i < size; i++)
-    //{
-        
-    //}
-    
-    /*else if (threadNum == 1) {
-        for (size_t i = 0; i < size; i+= 3)
-        {
-            // https://www.techrepublic.com/blog/how-do-i/how-do-i-convert-images-to-grayscale-and-sepia-tone-using-c/
-            uint8_t inputRed = originalData[i]; 
-            uint8_t inputGreen = originalData[i+1];
-            uint8_t inputBlue = originalData[i+2];
-
-            int red = (inputRed * 0.393) + (inputGreen * 0.769) + (inputBlue * 0.189); 
-            int green = (inputRed * 0.349) + (inputGreen * 0.686) + (inputBlue * 0.168);
-            int blue = (inputRed * 0.272) + (inputGreen * 0.534) + (inputBlue * 0.131);
-
-            if(red > 255) red = 255;
-            if(red < 0 ) red = 0;
-            if(green > 255) green = 255;
-            if(green < 0 ) green = 0;
-            if(blue > 255) blue = 255;
-            if(blue < 0 ) blue = 0;
-
-            result_sepia[i] = red;
-            result_sepia[i+1] = green;
-            result_sepia[i+2] = blue;
-        }
-    } else if (threadNum == 2) {
-        for (size_t i = 0; i < size; i+= 3)
-        {
-            originalData[i] = 255 - originalData[i];
-            originalData[i+1] = 255 - originalData[i+1];
-            originalData[i+2] = 255 - originalData[i+2];
-        }
-    }*/
 
 }
 
